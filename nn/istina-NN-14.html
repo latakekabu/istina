@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Приключения Истины в Нижнем Новгороде — Глава 14. Сон</title>
+  <meta name="description" content="Глава 14. Сон">
+  <meta name="color-scheme" content="dark light">
+  <meta property="og:title" content="Приключения Истины в Нижнем Новгороде">
+  <meta property="og:description" content="Глава 14. Сон">
+  <meta property="og:type" content="website">
+  <style>
+    :root {
+      --bg: #0a0d14; --bg-2: #0f1522; --surface: rgba(15, 23, 36, 0.72); --surface-strong: rgba(18, 29, 46, 0.92);
+      --text: #edf2ff; --muted: #b8c2da; --line: rgba(255,255,255,0.10); --line-strong: rgba(255,255,255,0.18);
+      --accent: #8db8ff; --accent-2: #bca3ff; --glow: rgba(125, 163, 255, 0.28); --shadow: 0 24px 80px rgba(0,0,0,0.35);
+      --radius-xl: 28px; --radius-lg: 22px; --container: 1120px; --content: 760px; --header-h: 72px;
+      --font-sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --font-serif: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino, "Times New Roman", serif;
+    }
+    html[data-theme="light"] {
+      --bg: #f4f7fb; --bg-2: #edf2f8; --surface: rgba(255,255,255,0.75); --surface-strong: rgba(255,255,255,0.95);
+      --text: #182131; --muted: #51607a; --line: rgba(24,33,49,0.10); --line-strong: rgba(24,33,49,0.18);
+      --accent: #295fd2; --accent-2: #7750d8; --glow: rgba(72, 117, 219, 0.18); --shadow: 0 24px 80px rgba(31,43,67,0.14);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation: none !important; transition: none !important; }
+    }
+    body {
+      margin: 0; font-family: var(--font-sans); color: var(--text);
+      background: radial-gradient(circle at top left, rgba(124,88,255,0.22), transparent 28%),
+                  radial-gradient(circle at top right, rgba(73,140,255,0.18), transparent 26%),
+                  linear-gradient(180deg, var(--bg), var(--bg-2) 42%, var(--bg));
+      min-height: 100vh;
+    }
+    a { color: var(--accent); text-underline-offset: 0.2em; }
+    a:hover { color: var(--accent-2); }
+    a:focus-visible, button:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 12px; }
+    .topbar { position: sticky; top: 0; z-index: 50; backdrop-filter: blur(16px); background: color-mix(in srgb, var(--bg) 70%, transparent); border-bottom: 1px solid var(--line); }
+    .topbar-inner { max-width: var(--container); margin: 0 auto; min-height: var(--header-h); padding: 12px 20px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+    .brand { display: flex; flex-direction: column; line-height: 1.05; }
+    .brand strong { font-size: 0.93rem; letter-spacing: 0.08em; text-transform: uppercase; }
+    .brand span { font-size: 0.78rem; color: var(--muted); }
+    .actions { display: flex; align-items: center; gap: 10px; }
+    .btn { appearance: none; border: 1px solid var(--line-strong); background: var(--surface); color: var(--text); border-radius: 999px; padding: 12px 16px; font: inherit; cursor: pointer; text-decoration: none; min-height: 44px; display: inline-flex; align-items: center; justify-content: center; transition: transform .2s ease, border-color .2s ease, background .2s ease; }
+    .btn:hover { transform: translateY(-1px); border-color: var(--accent); }
+    .btn-primary { background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: white; border-color: transparent; box-shadow: 0 10px 30px var(--glow); text-transform: uppercase; letter-spacing: .08em; }
+    .main { max-width: var(--container); margin: 0 auto; padding: 32px 20px 80px; }
+    .story-card, .cta-card { border: 1px solid var(--line); background: var(--surface); box-shadow: var(--shadow); border-radius: var(--radius-xl); }
+    .story-card { max-width: var(--content); margin: 0 auto; padding: clamp(24px, 4vw, 40px); backdrop-filter: blur(10px); }
+    .story-title { margin: 0 0 14px; font-family: var(--font-serif); font-size: clamp(2rem, 4vw, 3.3rem); line-height: 1.08; letter-spacing: -0.03em; }
+    .chapter-title { margin: 0 0 26px; font-size: 1rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+    .story-card p, .story-note { margin: 0 0 1.08em; font-family: var(--font-serif); font-size: clamp(1.08rem, 2vw, 1.32rem); line-height: 1.85; white-space: normal; overflow-wrap: anywhere; }
+    .chapter-illustration { margin: 1.75rem 0 2rem; }
+    .chapter-illustration img { display: block; width: 100%; height: auto; border-radius: 22px; border: 1px solid var(--line); background: color-mix(in srgb, var(--surface-strong) 82%, transparent); box-shadow: var(--shadow); }
+    .cta-wrap { max-width: var(--content); margin: 26px auto 0; }
+    .cta-card { padding: clamp(24px, 4vw, 38px); display: flex; align-items: center; justify-content: center; gap: 18px; background:
+      radial-gradient(circle at top left, rgba(115, 165, 255, .18), transparent 26%),
+      linear-gradient(180deg, color-mix(in srgb, var(--surface-strong) 92%, transparent), var(--surface)); }
+    @media (max-width: 640px) {
+      .topbar-inner { padding-inline: 14px; }
+      .main { padding-inline: 14px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar" id="top">
+    <div class="topbar-inner">
+      <div class="brand" aria-label="Название страницы">
+        <strong>Приключения Истины</strong>
+        <span>Нижний Новгород · глава 14</span>
+      </div>
+      <div class="actions">
+        <button class="btn" id="themeToggle" type="button" aria-label="Переключить тему">Тема</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <article class="story-card" id="story" aria-label="Текст главы">
+      <h1 class="story-title">Приключения Истины в Нижнем Новгороде</h1>
+      <h2 class="chapter-title">Глава 14. Сон</h2>
+
+      <p>Вечер пришёл во двор не сразу. Сначала он лёг тенью под лавку у красного дома, потом забрался на горки, затем тихо погасил блеск на качелях. Детская площадка опустела, будто кто-то невидимый сказал: «Съёмка окончена, продолжение завтра».</p>
+
+      <figure class="chapter-illustration">
+        <img src="./1/illustration-03.png" alt="Вечер опускается на двор: площадка пустеет, а Истина задерживается у знакомых домов и горок." loading="lazy" decoding="async">
+      </figure>
+
+      <p>— Мне пора, — сказала Саша и посмотрела на жёлтый дом. — А то сейчас начнётся: где ты, почему не ешь, почему вся в пыли.</p>
+      <p>— У меня так же, — сказала Вика. — Только без пыли. Наверное.</p>
+      <p>Полина пошла к голубому дому. Катя ещё раз прокатилась на роликах по кругу и притормозила так резко, что все посмотрели на неё.</p>
+      <p>— Что? — спросила Катя. — Я красиво ушла.</p>
+      <p>Оливия засмеялась и сказала, что это был почти как финал фильма. Ручка с Ластиком направились к красному дому, переговариваясь так важно, будто у них в подъезде заседание секретного штаба. Лёва делал вид, что ему вообще всё равно, но всё-таки спросил у Яши, не оставит ли тот мяч во дворе до завтра. Яша прижал мяч к себе.</p>
+      <p>— После сегодняшнего? Нет уж.</p>
+      <p>Истина задержалась у площадки. Ворота, горки, лавка, три высоких дома — всё было обычным. Но карта в её кармане была тёплой.</p>
+      <p>— До завтра, — сказала она двору и полша к подъезду.</p>
+      <p>Кодовый замок пискнул. Дверь закрылась.</p>
+      <p>Ночью Истине приснилось, что она стоит во дворе. Только двор был не тёмный, а синий, как экран телефона перед сном. В окнах красного, жёлтого и голубого домов горели маленькие огоньки. Каждый огонёк был чьим-то сном.</p>
+      <p>Сначала Истина подумала, что она одна. Потом из голубого света вышла Полина, из жёлтого — Саша и Вика, с другой стороны показались Катя и Оливия. Лёва стоял у лавки с Яшиным мячом и возмущённо шептал:</p>
+      <p>— Это не я придумал. Я вообще спал.</p>
+      <p>Посреди площадки лежала карта. На ней светилась буква С, найденная раньше. А рядом вдруг поднялись две горки, как два плеча, и между ними протянулась светлая дорожка. Получилась большая буква М.</p>
+
+      <figure class="chapter-illustration">
+        <img src="./1/illustration-04.png" alt="Во сне над площадкой возникает большая буква М, собранная из горок и светлой дорожки рядом с картой." loading="lazy" decoding="async">
+      </figure>
+
+      <p>Она не кричала и не мигала. Она просто стояла во сне, будто ждала, когда все её заметят.</p>
+      <p>— Сначала С, теперь М, — тихо сказала Истина.</p>
+      <p>И тут с качелей донёсся смешок. Не чей-то один. Общий. И сон погас как мотылек в утренней траве.</p>
+      <p>Утром каждому из них казалось, что сон был только его. Но карта в кармане Истины стала теплее ровно на одну букву.</p>
+    </article>
+
+    <section class="cta-wrap" aria-label="Навигация по странице">
+      <div class="cta-card">
+        <a class="btn btn-primary" href="../index.html">СОДЕРЖАНИЕ</a>
+      </div>
+    </section>
+  </main>
+
+  <script id="asset-manifest" type="application/json">{
+  "version": "3.0",
+  "mode": "single_html",
+  "visual_profile": "cinematic_service_premium",
+  "page": "istina-NN-14.html",
+  "slots": [
+    {
+      "slot": "hero_visual",
+      "role": "hero",
+      "status": "placeholder",
+      "type": "css_visual",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "slot": "cta_visual",
+      "role": "cta",
+      "status": "placeholder",
+      "type": "css_visual",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "slot": "og_image",
+      "role": "meta",
+      "status": "placeholder",
+      "type": "generated_placeholder",
+      "aspect_ratio": "1200:630"
+    }
+  ]
+}</script>
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  "headline": "Приключения Истины в Нижнем Новгороде",
+  "name": "Приключения Истины в Нижнем Новгороде",
+  "description": "Глава 14. Сон",
+  "inLanguage": "ru",
+  "genre": "Story",
+  "author": {
+    "@type": "Person",
+    "name": "Не указано"
+  }
+}</script>
+  <script>
+    (function() {
+      const root = document.documentElement;
+      const storageKey = 'lc_theme';
+      const saved = localStorage.getItem(storageKey);
+      if (saved === 'light' || saved === 'dark') {
+        root.setAttribute('data-theme', saved);
+      } else {
+        const prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+        root.setAttribute('data-theme', prefersLight ? 'light' : 'dark');
+      }
+      const btn = document.getElementById('themeToggle');
+      if (btn) {
+        btn.addEventListener('click', function() {
+          const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+          root.setAttribute('data-theme', next);
+          localStorage.setItem(storageKey, next);
+        });
+      }
+    })();
+  </script>
+
+  <script type="text/javascript">
+    (function(m,e,t,r,i,k,a) {
+      m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+      m[i].l=1*new Date();
+      for (var j = 0; j < document.scripts.length; j++) {
+        if (document.scripts[j].src === r) return;
+      }
+      k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a);
+    })(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+    ym(109239506, "init", {
+      clickmap:true,
+      trackLinks:true,
+      accurateTrackBounce:true,
+      webvisor:true
+    });
+  </script>
+  <noscript><div><img src="https://mc.yandex.ru/watch/109239506" style="position:absolute; left:-9999px;" alt=""></div></noscript>
+</body>
+</html>
