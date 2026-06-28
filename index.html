@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Приключения Истины в Нижнем Новгороде</title>
+  <title>Приключения Истины в Нижнем Новгороде — Содержание</title>
   <meta name="description" content="Содержание книги «Приключения Истины в Нижнем Новгороде»">
   <meta name="color-scheme" content="dark light">
-  <meta property="og:title" content="Приключения Истины в Нижнем Новгороде">
+  <meta property="og:title" content="Приключения Истины в Нижнем Новгороде — Содержание">
   <meta property="og:description" content="Ссылки на главы 1–88">
   <meta property="og:type" content="website">
   <style>
@@ -198,60 +198,10 @@
       color: var(--muted);
       font-weight: 600;
     }
-    .groups {
+    .chapter-list {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 16px;
-    }
-    .chapter-group {
-      border: 1px solid var(--line);
-      border-radius: var(--radius-lg);
-      background: color-mix(in srgb, var(--surface-strong) 65%, transparent);
-      overflow: hidden;
-    }
-    .chapter-group summary {
-      list-style: none;
-      cursor: pointer;
-      padding: 18px 20px;
-      min-height: 72px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 14px;
-      font-size: 1.04rem;
-      line-height: 1.35;
-      user-select: none;
-    }
-    .chapter-group summary::-webkit-details-marker { display: none; }
-    .chapter-group summary:hover {
-      background: color-mix(in srgb, var(--surface-strong) 78%, transparent);
-    }
-    .group-label {
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-      min-width: 0;
-    }
-    .group-range {
-      font-size: .8rem;
-      letter-spacing: .14em;
-      text-transform: uppercase;
-      color: var(--muted);
-    }
-    .group-name {
-      font-size: 1.04rem;
-      color: var(--text);
-    }
-    .group-arrow {
-      color: var(--muted);
-      transition: transform .2s ease;
-      flex: 0 0 auto;
-    }
-    .chapter-group[open] .group-arrow { transform: rotate(180deg); }
-    .chapter-list {
-      padding: 0 18px 18px;
-      display: grid;
-      gap: 10px;
+      gap: 12px;
     }
     .chapter-link {
       display: flex;
@@ -271,6 +221,7 @@
       border-color: var(--accent);
       background: color-mix(in srgb, var(--surface-strong) 78%, transparent);
     }
+
     @media (max-width: 920px) {
       .groups { grid-template-columns: 1fr; }
     }
@@ -287,7 +238,7 @@
     <div class="topbar-inner">
       <div class="brand" aria-label="Название страницы">
         <strong>Приключения Истины</strong>
-        <span>Нижний Новгород</span>
+        <span>Нижний Новгород · содержание</span>
       </div>
       <div class="actions">
         <button class="btn" id="themeToggle" type="button" aria-label="Переключить тему">Тема</button>
@@ -299,8 +250,6 @@
     <div class="hero-card">
       <div class="eyebrow">Навигация по книге</div>
       <h1>Содержание</h1>
-      <h3>Это живая история, которая растёт вместе с детьми: они ведут её, а она их.</h3>	  
-	  
     </div>
   </section>
 
@@ -309,226 +258,95 @@
       <h2 class="index-title">Главы 1–88</h2>
       <p class="index-subtitle">Список страниц</p>
 
-      <div class="groups">
-        <details class="chapter-group" open>
-          <summary>
-            <span class="group-label">
-              <span class="group-range">Главы</span>
-              <span class="group-name">1–8</span>
-            </span>
-            <span class="group-arrow" aria-hidden="true">▾</span>
-          </summary>
-          <div class="chapter-list">
-            <a class="chapter-link" href="nn/istina-NN-1.html"><span>Глава 1</span></a>
-            <a class="chapter-link" href="nn/istina-NN-2.html"><span>Глава 2</span></a>
-            <a class="chapter-link" href="nn/istina-NN-3.html"><span>Глава 3</span></a>
-            <a class="chapter-link" href="nn/istina-NN-4.html"><span>Глава 4</span></a>
-            <a class="chapter-link" href="nn/istina-NN-5.html"><span>Глава 5</span></a>
-            <a class="chapter-link" href="nn/istina-NN-6.html"><span>Глава 6</span></a>
-            <a class="chapter-link" href="nn/istina-NN-7.html"><span>Глава 7</span></a>
-            <a class="chapter-link" href="nn/istina-NN-8.html"><span>Глава 8</span></a>
-          </div>
-        </details>
-
-        <details class="chapter-group">
-          <summary>
-            <span class="group-label">
-              <span class="group-range">Главы</span>
-              <span class="group-name">9–16</span>
-            </span>
-            <span class="group-arrow" aria-hidden="true">▾</span>
-          </summary>
-          <div class="chapter-list">
-            <a class="chapter-link" href="nn/istina-NN-9.html"><span>Глава 9</span></a>
-            <a class="chapter-link" href="nn/istina-NN-10.html"><span>Глава 10</span></a>
-            <a class="chapter-link" href="nn/istina-NN-11.html"><span>Глава 11</span></a>
-            <a class="chapter-link" href="nn/istina-NN-12.html"><span>Глава 12</span></a>
-            <a class="chapter-link" href="nn/istina-NN-13.html"><span>Глава 13</span></a>
-            <a class="chapter-link" href="nn/istina-NN-14.html"><span>Глава 14</span></a>
-            <a class="chapter-link" href="nn/istina-NN-15.html"><span>Глава 15</span></a>
-            <a class="chapter-link" href="nn/istina-NN-16.html"><span>Глава 16</span></a>
-          </div>
-        </details>
-
-        <details class="chapter-group">
-          <summary>
-            <span class="group-label">
-              <span class="group-range">Главы</span>
-              <span class="group-name">17–24</span>
-            </span>
-            <span class="group-arrow" aria-hidden="true">▾</span>
-          </summary>
-          <div class="chapter-list">
-            <a class="chapter-link" href="nn/istina-NN-17.html"><span>Глава 17</span></a>
-            <a class="chapter-link" href="nn/istina-NN-18.html"><span>Глава 18</span></a>
-            <a class="chapter-link" href="nn/istina-NN-19.html"><span>Глава 19</span></a>
-            <a class="chapter-link" href="nn/istina-NN-20.html"><span>Глава 20</span></a>
-            <a class="chapter-link" href="nn/istina-NN-21.html"><span>Глава 21</span></a>
-            <a class="chapter-link" href="nn/istina-NN-22.html"><span>Глава 22</span></a>
-            <a class="chapter-link" href="nn/istina-NN-23.html"><span>Глава 23</span></a>
-            <a class="chapter-link" href="nn/istina-NN-24.html"><span>Глава 24</span></a>
-          </div>
-        </details>
-
-        <details class="chapter-group">
-          <summary>
-            <span class="group-label">
-              <span class="group-range">Главы</span>
-              <span class="group-name">25–32</span>
-            </span>
-            <span class="group-arrow" aria-hidden="true">▾</span>
-          </summary>
-          <div class="chapter-list">
-            <a class="chapter-link" href="nn/istina-NN-25.html"><span>Глава 25</span></a>
-            <a class="chapter-link" href="nn/istina-NN-26.html"><span>Глава 26</span></a>
-            <a class="chapter-link" href="nn/istina-NN-27.html"><span>Глава 27</span></a>
-            <a class="chapter-link" href="nn/istina-NN-28.html"><span>Глава 28</span></a>
-            <a class="chapter-link" href="nn/istina-NN-29.html"><span>Глава 29</span></a>
-            <a class="chapter-link" href="nn/istina-NN-30.html"><span>Глава 30</span></a>
-            <a class="chapter-link" href="nn/istina-NN-31.html"><span>Глава 31</span></a>
-            <a class="chapter-link" href="nn/istina-NN-32.html"><span>Глава 32</span></a>
-          </div>
-        </details>
-
-        <details class="chapter-group">
-          <summary>
-            <span class="group-label">
-              <span class="group-range">Главы</span>
-              <span class="group-name">33–40</span>
-            </span>
-            <span class="group-arrow" aria-hidden="true">▾</span>
-          </summary>
-          <div class="chapter-list">
-            <a class="chapter-link" href="nn/istina-NN-33.html"><span>Глава 33</span></a>
-            <a class="chapter-link" href="nn/istina-NN-34.html"><span>Глава 34</span></a>
-            <a class="chapter-link" href="nn/istina-NN-35.html"><span>Глава 35</span></a>
-            <a class="chapter-link" href="nn/istina-NN-36.html"><span>Глава 36</span></a>
-            <a class="chapter-link" href="nn/istina-NN-37.html"><span>Глава 37</span></a>
-            <a class="chapter-link" href="nn/istina-NN-38.html"><span>Глава 38</span></a>
-            <a class="chapter-link" href="nn/istina-NN-39.html"><span>Глава 39</span></a>
-            <a class="chapter-link" href="nn/istina-NN-40.html"><span>Глава 40</span></a>
-          </div>
-        </details>
-
-        <details class="chapter-group">
-          <summary>
-            <span class="group-label">
-              <span class="group-range">Главы</span>
-              <span class="group-name">41–48</span>
-            </span>
-            <span class="group-arrow" aria-hidden="true">▾</span>
-          </summary>
-          <div class="chapter-list">
-            <a class="chapter-link" href="nn/istina-NN-41.html"><span>Глава 41</span></a>
-            <a class="chapter-link" href="nn/istina-NN-42.html"><span>Глава 42</span></a>
-            <a class="chapter-link" href="nn/istina-NN-43.html"><span>Глава 43</span></a>
-            <a class="chapter-link" href="nn/istina-NN-44.html"><span>Глава 44</span></a>
-            <a class="chapter-link" href="nn/istina-NN-45.html"><span>Глава 45</span></a>
-            <a class="chapter-link" href="nn/istina-NN-46.html"><span>Глава 46</span></a>
-            <a class="chapter-link" href="nn/istina-NN-47.html"><span>Глава 47</span></a>
-            <a class="chapter-link" href="nn/istina-NN-48.html"><span>Глава 48</span></a>
-          </div>
-        </details>
-
-        <details class="chapter-group">
-          <summary>
-            <span class="group-label">
-              <span class="group-range">Главы</span>
-              <span class="group-name">49–56</span>
-            </span>
-            <span class="group-arrow" aria-hidden="true">▾</span>
-          </summary>
-          <div class="chapter-list">
-            <a class="chapter-link" href="nn/istina-NN-49.html"><span>Глава 49</span></a>
-            <a class="chapter-link" href="nn/istina-NN-50.html"><span>Глава 50</span></a>
-            <a class="chapter-link" href="nn/istina-NN-51.html"><span>Глава 51</span></a>
-            <a class="chapter-link" href="nn/istina-NN-52.html"><span>Глава 52</span></a>
-            <a class="chapter-link" href="nn/istina-NN-53.html"><span>Глава 53</span></a>
-            <a class="chapter-link" href="nn/istina-NN-54.html"><span>Глава 54</span></a>
-            <a class="chapter-link" href="nn/istina-NN-55.html"><span>Глава 55</span></a>
-            <a class="chapter-link" href="nn/istina-NN-56.html"><span>Глава 56</span></a>
-          </div>
-        </details>
-
-        <details class="chapter-group">
-          <summary>
-            <span class="group-label">
-              <span class="group-range">Главы</span>
-              <span class="group-name">57–64</span>
-            </span>
-            <span class="group-arrow" aria-hidden="true">▾</span>
-          </summary>
-          <div class="chapter-list">
-            <a class="chapter-link" href="nn/istina-NN-57.html"><span>Глава 57</span></a>
-            <a class="chapter-link" href="nn/istina-NN-58.html"><span>Глава 58</span></a>
-            <a class="chapter-link" href="nn/istina-NN-59.html"><span>Глава 59</span></a>
-            <a class="chapter-link" href="nn/istina-NN-60.html"><span>Глава 60</span></a>
-            <a class="chapter-link" href="nn/istina-NN-61.html"><span>Глава 61</span></a>
-            <a class="chapter-link" href="nn/istina-NN-62.html"><span>Глава 62</span></a>
-            <a class="chapter-link" href="nn/istina-NN-63.html"><span>Глава 63</span></a>
-            <a class="chapter-link" href="nn/istina-NN-64.html"><span>Глава 64</span></a>
-          </div>
-        </details>
-
-        <details class="chapter-group">
-          <summary>
-            <span class="group-label">
-              <span class="group-range">Главы</span>
-              <span class="group-name">65–72</span>
-            </span>
-            <span class="group-arrow" aria-hidden="true">▾</span>
-          </summary>
-          <div class="chapter-list">
-            <a class="chapter-link" href="nn/istina-NN-65.html"><span>Глава 65</span></a>
-            <a class="chapter-link" href="nn/istina-NN-66.html"><span>Глава 66</span></a>
-            <a class="chapter-link" href="nn/istina-NN-67.html"><span>Глава 67</span></a>
-            <a class="chapter-link" href="nn/istina-NN-68.html"><span>Глава 68</span></a>
-            <a class="chapter-link" href="nn/istina-NN-69.html"><span>Глава 69</span></a>
-            <a class="chapter-link" href="nn/istina-NN-70.html"><span>Глава 70</span></a>
-            <a class="chapter-link" href="nn/istina-NN-71.html"><span>Глава 71</span></a>
-            <a class="chapter-link" href="nn/istina-NN-72.html"><span>Глава 72</span></a>
-          </div>
-        </details>
-
-        <details class="chapter-group">
-          <summary>
-            <span class="group-label">
-              <span class="group-range">Главы</span>
-              <span class="group-name">73–80</span>
-            </span>
-            <span class="group-arrow" aria-hidden="true">▾</span>
-          </summary>
-          <div class="chapter-list">
-            <a class="chapter-link" href="nn/istina-NN-73.html"><span>Глава 73</span></a>
-            <a class="chapter-link" href="nn/istina-NN-74.html"><span>Глава 74</span></a>
-            <a class="chapter-link" href="nn/istina-NN-75.html"><span>Глава 75</span></a>
-            <a class="chapter-link" href="nn/istina-NN-76.html"><span>Глава 76</span></a>
-            <a class="chapter-link" href="nn/istina-NN-77.html"><span>Глава 77</span></a>
-            <a class="chapter-link" href="nn/istina-NN-78.html"><span>Глава 78</span></a>
-            <a class="chapter-link" href="nn/istina-NN-79.html"><span>Глава 79</span></a>
-            <a class="chapter-link" href="nn/istina-NN-80.html"><span>Глава 80</span></a>
-          </div>
-        </details>
-
-        <details class="chapter-group">
-          <summary>
-            <span class="group-label">
-              <span class="group-range">Главы</span>
-              <span class="group-name">81–88</span>
-            </span>
-            <span class="group-arrow" aria-hidden="true">▾</span>
-          </summary>
-          <div class="chapter-list">
-            <a class="chapter-link" href="nn/istina-NN-81.html"><span>Глава 81</span></a>
-            <a class="chapter-link" href="nn/istina-NN-82.html"><span>Глава 82</span></a>
-            <a class="chapter-link" href="nn/istina-NN-83.html"><span>Глава 83</span></a>
-            <a class="chapter-link" href="nn/istina-NN-84.html"><span>Глава 84</span></a>
-            <a class="chapter-link" href="nn/istina-NN-85.html"><span>Глава 85</span></a>
-            <a class="chapter-link" href="nn/istina-NN-86.html"><span>Глава 86</span></a>
-            <a class="chapter-link" href="nn/istina-NN-87.html"><span>Глава 87</span></a>
-            <a class="chapter-link" href="nn/istina-NN-88.html"><span>Глава 88</span></a>
-          </div>
-        </details>
+      <div class="chapter-list">
+        <a class="chapter-link" href="nn/istina-NN-1.html"><span>Глава 1</span></a>
+        <a class="chapter-link" href="nn/istina-NN-2.html"><span>Глава 2</span></a>
+        <a class="chapter-link" href="nn/istina-NN-3.html"><span>Глава 3</span></a>
+        <a class="chapter-link" href="nn/istina-NN-4.html"><span>Глава 4</span></a>
+        <a class="chapter-link" href="nn/istina-NN-5.html"><span>Глава 5</span></a>
+        <a class="chapter-link" href="nn/istina-NN-6.html"><span>Глава 6</span></a>
+        <a class="chapter-link" href="nn/istina-NN-7.html"><span>Глава 7</span></a>
+        <a class="chapter-link" href="nn/istina-NN-8.html"><span>Глава 8</span></a>
+        <a class="chapter-link" href="nn/istina-NN-9.html"><span>Глава 9</span></a>
+        <a class="chapter-link" href="nn/istina-NN-10.html"><span>Глава 10</span></a>
+        <a class="chapter-link" href="nn/istina-NN-11.html"><span>Глава 11</span></a>
+        <a class="chapter-link" href="nn/istina-NN-12.html"><span>Глава 12</span></a>
+        <a class="chapter-link" href="nn/istina-NN-13.html"><span>Глава 13</span></a>
+        <a class="chapter-link" href="nn/istina-NN-14.html"><span>Глава 14</span></a>
+        <a class="chapter-link" href="nn/istina-NN-15.html"><span>Глава 15</span></a>
+        <a class="chapter-link" href="nn/istina-NN-16.html"><span>Глава 16</span></a>
+        <a class="chapter-link" href="nn/istina-NN-17.html"><span>Глава 17</span></a>
+        <a class="chapter-link" href="nn/istina-NN-18.html"><span>Глава 18</span></a>
+        <a class="chapter-link" href="nn/istina-NN-19.html"><span>Глава 19</span></a>
+        <a class="chapter-link" href="nn/istina-NN-20.html"><span>Глава 20</span></a>
+        <a class="chapter-link" href="nn/istina-NN-21.html"><span>Глава 21</span></a>
+        <a class="chapter-link" href="nn/istina-NN-22.html"><span>Глава 22</span></a>
+        <a class="chapter-link" href="nn/istina-NN-23.html"><span>Глава 23</span></a>
+        <a class="chapter-link" href="nn/istina-NN-24.html"><span>Глава 24</span></a>
+        <a class="chapter-link" href="nn/istina-NN-25.html"><span>Глава 25</span></a>
+        <a class="chapter-link" href="nn/istina-NN-26.html"><span>Глава 26</span></a>
+        <a class="chapter-link" href="nn/istina-NN-27.html"><span>Глава 27</span></a>
+        <a class="chapter-link" href="nn/istina-NN-28.html"><span>Глава 28</span></a>
+        <a class="chapter-link" href="nn/istina-NN-29.html"><span>Глава 29</span></a>
+        <a class="chapter-link" href="nn/istina-NN-30.html"><span>Глава 30</span></a>
+        <a class="chapter-link" href="nn/istina-NN-31.html"><span>Глава 31</span></a>
+        <a class="chapter-link" href="nn/istina-NN-32.html"><span>Глава 32</span></a>
+        <a class="chapter-link" href="nn/istina-NN-33.html"><span>Глава 33</span></a>
+        <a class="chapter-link" href="nn/istina-NN-34.html"><span>Глава 34</span></a>
+        <a class="chapter-link" href="nn/istina-NN-35.html"><span>Глава 35</span></a>
+        <a class="chapter-link" href="nn/istina-NN-36.html"><span>Глава 36</span></a>
+        <a class="chapter-link" href="nn/istina-NN-37.html"><span>Глава 37</span></a>
+        <a class="chapter-link" href="nn/istina-NN-38.html"><span>Глава 38</span></a>
+        <a class="chapter-link" href="nn/istina-NN-39.html"><span>Глава 39</span></a>
+        <a class="chapter-link" href="nn/istina-NN-40.html"><span>Глава 40</span></a>
+        <a class="chapter-link" href="nn/istina-NN-41.html"><span>Глава 41</span></a>
+        <a class="chapter-link" href="nn/istina-NN-42.html"><span>Глава 42</span></a>
+        <a class="chapter-link" href="nn/istina-NN-43.html"><span>Глава 43</span></a>
+        <a class="chapter-link" href="nn/istina-NN-44.html"><span>Глава 44</span></a>
+        <a class="chapter-link" href="nn/istina-NN-45.html"><span>Глава 45</span></a>
+        <a class="chapter-link" href="nn/istina-NN-46.html"><span>Глава 46</span></a>
+        <a class="chapter-link" href="nn/istina-NN-47.html"><span>Глава 47</span></a>
+        <a class="chapter-link" href="nn/istina-NN-48.html"><span>Глава 48</span></a>
+        <a class="chapter-link" href="nn/istina-NN-49.html"><span>Глава 49</span></a>
+        <a class="chapter-link" href="nn/istina-NN-50.html"><span>Глава 50</span></a>
+        <a class="chapter-link" href="nn/istina-NN-51.html"><span>Глава 51</span></a>
+        <a class="chapter-link" href="nn/istina-NN-52.html"><span>Глава 52</span></a>
+        <a class="chapter-link" href="nn/istina-NN-53.html"><span>Глава 53</span></a>
+        <a class="chapter-link" href="nn/istina-NN-54.html"><span>Глава 54</span></a>
+        <a class="chapter-link" href="nn/istina-NN-55.html"><span>Глава 55</span></a>
+        <a class="chapter-link" href="nn/istina-NN-56.html"><span>Глава 56</span></a>
+        <a class="chapter-link" href="nn/istina-NN-57.html"><span>Глава 57</span></a>
+        <a class="chapter-link" href="nn/istina-NN-58.html"><span>Глава 58</span></a>
+        <a class="chapter-link" href="nn/istina-NN-59.html"><span>Глава 59</span></a>
+        <a class="chapter-link" href="nn/istina-NN-60.html"><span>Глава 60</span></a>
+        <a class="chapter-link" href="nn/istina-NN-61.html"><span>Глава 61</span></a>
+        <a class="chapter-link" href="nn/istina-NN-62.html"><span>Глава 62</span></a>
+        <a class="chapter-link" href="nn/istina-NN-63.html"><span>Глава 63</span></a>
+        <a class="chapter-link" href="nn/istina-NN-64.html"><span>Глава 64</span></a>
+        <a class="chapter-link" href="nn/istina-NN-65.html"><span>Глава 65</span></a>
+        <a class="chapter-link" href="nn/istina-NN-66.html"><span>Глава 66</span></a>
+        <a class="chapter-link" href="nn/istina-NN-67.html"><span>Глава 67</span></a>
+        <a class="chapter-link" href="nn/istina-NN-68.html"><span>Глава 68</span></a>
+        <a class="chapter-link" href="nn/istina-NN-69.html"><span>Глава 69</span></a>
+        <a class="chapter-link" href="nn/istina-NN-70.html"><span>Глава 70</span></a>
+        <a class="chapter-link" href="nn/istina-NN-71.html"><span>Глава 71</span></a>
+        <a class="chapter-link" href="nn/istina-NN-72.html"><span>Глава 72</span></a>
+        <a class="chapter-link" href="nn/istina-NN-73.html"><span>Глава 73</span></a>
+        <a class="chapter-link" href="nn/istina-NN-74.html"><span>Глава 74</span></a>
+        <a class="chapter-link" href="nn/istina-NN-75.html"><span>Глава 75</span></a>
+        <a class="chapter-link" href="nn/istina-NN-76.html"><span>Глава 76</span></a>
+        <a class="chapter-link" href="nn/istina-NN-77.html"><span>Глава 77</span></a>
+        <a class="chapter-link" href="nn/istina-NN-78.html"><span>Глава 78</span></a>
+        <a class="chapter-link" href="nn/istina-NN-79.html"><span>Глава 79</span></a>
+        <a class="chapter-link" href="nn/istina-NN-80.html"><span>Глава 80</span></a>
+        <a class="chapter-link" href="nn/istina-NN-81.html"><span>Глава 81</span></a>
+        <a class="chapter-link" href="nn/istina-NN-82.html"><span>Глава 82</span></a>
+        <a class="chapter-link" href="nn/istina-NN-83.html"><span>Глава 83</span></a>
+        <a class="chapter-link" href="nn/istina-NN-84.html"><span>Глава 84</span></a>
+        <a class="chapter-link" href="nn/istina-NN-85.html"><span>Глава 85</span></a>
+        <a class="chapter-link" href="nn/istina-NN-86.html"><span>Глава 86</span></a>
+        <a class="chapter-link" href="nn/istina-NN-87.html"><span>Глава 87</span></a>
+        <a class="chapter-link" href="nn/istina-NN-88.html"><span>Глава 88</span></a>
       </div>
     </section>
   </main>
