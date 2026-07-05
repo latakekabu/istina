@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Приключения Истины в Нижнем Новгороде</title>
+  <meta name="description" content="Пять дней, которые оказались больше, чем фестиваль">
+  <meta name="color-scheme" content="dark light">
+  <meta property="og:title" content="Приключения Истины в Нижнем Новгороде">
+  <meta property="og:description" content="Пять дней, которые оказались больше, чем фестиваль">
+  <meta property="og:type" content="website">
+
+  <style>
+    :root {
+      --bg: #0a0d14; --bg-2: #0f1522; --surface: rgba(15, 23, 36, 0.72); --surface-strong: rgba(18, 29, 46, 0.92);
+      --text: #edf2ff; --muted: #b8c2da; --line: rgba(255,255,255,0.10); --line-strong: rgba(255,255,255,0.18);
+      --accent: #8db8ff; --accent-2: #bca3ff; --glow: rgba(125, 163, 255, 0.28); --shadow: 0 24px 80px rgba(0,0,0,0.35);
+      --radius-xl: 28px; --radius-lg: 22px; --container: 1120px; --content: 760px; --header-h: 72px;
+      --font-sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --font-serif: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino, "Times New Roman", serif;
+    }
+    html[data-theme="light"] {
+      --bg: #f4f7fb; --bg-2: #edf2f8; --surface: rgba(255,255,255,0.75); --surface-strong: rgba(255,255,255,0.95);
+      --text: #182131; --muted: #51607a; --line: rgba(24,33,49,0.10); --line-strong: rgba(24,33,49,0.18);
+      --accent: #295fd2; --accent-2: #7750d8; --glow: rgba(72, 117, 219, 0.18); --shadow: 0 24px 80px rgba(31,43,67,0.14);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: var(--font-sans);
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(124,88,255,0.22), transparent 28%),
+        radial-gradient(circle at top right, rgba(73,140,255,0.18), transparent 26%),
+        linear-gradient(180deg, var(--bg), var(--bg-2) 42%, var(--bg));
+      min-height: 100vh;
+    }
+
+    a { color: var(--accent); }
+
+    .topbar {
+      position: sticky; top: 0; z-index: 50;
+      backdrop-filter: blur(16px);
+      background: rgba(10,14,22,0.6);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .topbar-inner {
+      max-width: var(--container);
+      margin: 0 auto;
+      min-height: var(--header-h);
+      padding: 12px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand strong {
+      font-size: 0.93rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      display:block;
+    }
+    .brand span {
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    .btn {
+      border: 1px solid var(--line-strong);
+      background: var(--surface);
+      color: var(--text);
+      border-radius: 999px;
+      padding: 12px 16px;
+      cursor: pointer;
+    }
+
+    .main {
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 32px 20px 80px;
+    }
+
+    .story-card {
+      max-width: var(--content);
+      margin: 0 auto;
+      padding: 40px;
+      border-radius: var(--radius-xl);
+      border: 1px solid var(--line);
+      background: var(--surface);
+      box-shadow: var(--shadow);
+    }
+
+    .story-title {
+      font-family: var(--font-serif);
+      font-size: 2.6rem;
+      margin: 0 0 10px;
+    }
+
+    .chapter-title {
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      margin-bottom: 24px;
+    }
+
+    .story-card p {
+      font-family: var(--font-serif);
+      font-size: 1.2rem;
+      line-height: 1.85;
+      margin: 0 0 1em;
+    }
+
+    .cta-wrap {
+      max-width: var(--content);
+      margin: 30px auto 0;
+      text-align: center;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      color: white;
+      border: none;
+      padding: 14px 18px;
+      border-radius: 14px;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .chapter-illustration img {
+      width: 100%;
+      border-radius: 18px;
+      margin: 18px 0;
+      border: 1px solid var(--line);
+    }
+  </style>
+</head>
+
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <strong>Приключения Истины</strong>
+      <span>Нижний Новгород · глава 19</span>
+    </div>
+    <button class="btn" onclick="toggleTheme()">Тема</button>
+  </div>
+</header>
+
+<main class="main">
+  <article class="story-card">
+    <h1 class="story-title">Пять дней, которые оказались больше, чем фестиваль</h1>
+
+<p>— Обгоняй!</p>
+
+<p>Я говорю это раньше, чем папа успевает включить поворотник.</p>
+
+<p>Он улыбается.</p>
+
+<p>— Уже?</p>
+
+<p>— Конечно!</p>
+
+<p>Машина плавно выезжает на встречную полосу.</p>
+
+<p>Двигатель начинает гудеть громче.</p>
+
+<p>Деревья за окном вдруг убегают назад так быстро, что превращаются в зелёную стену.</p>
+
+<p>Мне кажется, будто мы сейчас взлетим.</p>
+
+<p>— Есть! — смеюсь я.</p>
+
+<p>Папа возвращает машину в свою полосу.</p>
+
+<p>— Довольна?</p>
+
+<p>— Нет.</p>
+
+<p>— Почему?</p>
+
+<p>— Потому что впереди ещё одна машина.</p>
+
+<p>Он качает головой.</p>
+
+<p>— Ты очень опасный штурман.</p>
+
+<p>Через минуту мы снова идём на обгон.</p>
+
+<p>Наверное, можно ехать спокойно.</p>
+
+<p>Но так гораздо веселее.</p>
+
+<p>Через несколько часов папа убирает ногу с газа.</p>
+
+<p>— Почти приехали.</p>
+
+<p>Асфальт заканчивается.</p>
+
+<p>Перед нами начинается лесная дорога.</p>
+
+<p>Машина медленно сворачивает между соснами.</p>
+
+<p>Дорога всё время идёт вверх и вниз. Колёса перекатываются через толстые корни. Нас слегка подбрасывает, будто мы едем не по земле, а по огромным зелёным волнам.</p>
+
+<p>— У-у-у! — смеюсь я на каждом подъёме.</p>
+
+<p>— Это ещё не аттракцион, — говорит папа. — Это только дорога к нему.</p>
+
+<p>Лес становится всё гуще.</p>
+
+<p>Солнце мигает между стволами.</p>
+
+<p>Иногда кажется, что мы совсем одни.</p>
+
+<p>И вдруг впереди появляется шлагбаум.</p>
+
+<p>Рядом стоят волонтёры.</p>
+
+<p>Папа показывает пропуск.</p>
+
+<p>— Добро пожаловать на «Дофамин»! — говорит мужчина в яркой футболке.</p>
+
+<p>Шлагбаум медленно поднимается.</p>
+
+<p>— Теперь начинается, — тихо говорит папа.</p>
+
+<p>Мы снова едем.</p>
+
+<p>Только теперь лес меняется.</p>
+
+<p>Между соснами появляются палатки.</p>
+
+<p>Потом ещё.</p>
+
+<p>Потом ещё десятки.</p>
+
+<p>Под деревьями стоят машины. Где-то натянут огромный тент. Кто-то варит суп. Кто-то играет на гитаре. Дети бегут по тропинке с мячом так, будто живут здесь уже целое лето.</p>
+
+<p>— Здесь правда больше тысячи человек? — спрашиваю я.</p>
+
+<p>— Правда.</p>
+
+<p>Я пытаюсь представить тысячу человек.</p>
+
+<p>Не получается.</p>
+
+<p>Папа едет совсем медленно.</p>
+
+<p>— Надо найти наше место.</p>
+
+<p>Мы долго кружим между соснами.</p>
+
+<p>Смотрим направо.</p>
+
+<p>Налево.</p>
+
+<p>Ещё дальше.</p>
+
+<p>И вдруг лес заканчивается.</p>
+
+<p>Перед нами открывается высокий берег.</p>
+
+<p>Внизу — огромное Горьковское море.</p>
+
+<p>Я даже забываю закрыть дверь машины.</p>
+
+<p>Ветер сразу треплет волосы.</p>
+
+<p>Вода блестит так ярко, что приходится прищуриться.</p>
+
+<p>— Ну как? — спрашивает папа.</p>
+
+<p>Я долго молчу.</p>
+
+<p>Потом выдыхаю:</p>
+
+<p>— Можно здесь жить всё лето?</p>
+
+<p>Папа смеётся.</p>
+
+<p>— Попробуем начать хотя бы с пяти дней.</p>
+
+<p>Мы вместе ставим палатку.</p>
+
+<p>Папа собирает дуги.</p>
+
+<p>Я держу тент.</p>
+
+<p>Потом мы надуваем огромный матрас.</p>
+
+<p>Я сразу падаю на него.</p>
+
+<p>Он мягкий, как батут.</p>
+
+<p>— Проверку прошёл? — спрашивает папа.</p>
+
+<p>Я подпрыгиваю ещё раз.</p>
+
+<p>— Прошёл!</p>
+
+<p>Пока папа раскладывает вещи, я отправляюсь исследовать лагерь.</p>
+
+<p>Вокруг всё время что-то происходит.</p>
+
+<p>Кто-то поёт.</p>
+
+<p>Кто-то смеётся.</p>
+
+<p>Кто-то несёт огромный арбуз.</p>
+
+<p>Из соседнего лагеря пахнет пловом.</p>
+
+<p>Из другого — жареными сосисками.</p>
+
+<p>Мне хочется посмотреть сразу везде.</p>
+
+<p>Но детей моего возраста почти не видно.</p>
+
+<p>Я прохожу одну тропинку.</p>
+
+<p>Потом вторую.</p>
+
+<p>Потом третью.</p>
+
+<p>И возвращаюсь обратно.</p>
+
+<p>— Уже всё? — спрашивает папа.</p>
+
+<p>— Пока никого не нашла...</p>
+
+<p>Он наливает мне чай.</p>
+
+<p>— Не спеши.</p>
+
+<p>— Думаешь, получится?</p>
+
+<p>— Самые хорошие знакомства всегда начинаются случайно.</p>
+
+<p>Вечером я снова выхожу гулять.</p>
+
+<p>Солнце уже прячется за соснами.</p>
+
+<p>Воздух становится прохладнее.</p>
+
+<p>И вдруг слышу за спиной:</p>
+
+<p>— Привет!</p>
+
+<p>Я оборачиваюсь.</p>
+
+<p>Передо мной стоит девочка примерно моего возраста.</p>
+
+<p>Мы улыбаемся друг другу.</p>
+
+<p>Знакомимся.</p>
+
+<p>Разговариваем совсем недолго.</p>
+
+<p>Потом её зовут.</p>
+
+<p>Она машет рукой и убегает.</p>
+
+<p>Я смотрю ей вслед.</p>
+
+<p>И вдруг понимаю, что улыбаюсь.</p>
+
+<p>Кажется, фестиваль наконец-то принял меня.</p>
+  </article>
+
+  <section class="cta-wrap">
+    <a class="btn-primary" href="../index.html">СОДЕРЖАНИЕ</a>
+  </section>
+</main>
+
+<script>
+function toggleTheme(){
+  const r = document.documentElement;
+  r.setAttribute('data-theme', r.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+}
+</script>
+
+<!-- Yandex.Metrika -->
+<script type="text/javascript">
+  (function(m,e,t,r,i,k,a){
+    m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+    m[i].l=1*new Date();
+    k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+  })(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+  ym(109239506, "init", {
+    clickmap:true,
+    trackLinks:true,
+    accurateTrackBounce:true
+  });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/109239506" style="position:absolute; left:-9999px;" alt=""></div></noscript>
+
+</body>
+</html>
