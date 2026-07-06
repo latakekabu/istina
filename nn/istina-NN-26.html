@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Приключения Истины в Нижнем Новгороде</title>
+  <meta name="description" content="Дождь по крыше палатки">
+  <meta name="color-scheme" content="dark light">
+  <meta property="og:title" content="Приключения Истины в Нижнем Новгороде">
+  <meta property="og:description" content="Дождь по крыше палатки">
+  <meta property="og:type" content="website">
+
+  <style>
+    :root {
+      --bg: #0a0d14; --bg-2: #0f1522; --surface: rgba(15, 23, 36, 0.72); --surface-strong: rgba(18, 29, 46, 0.92);
+      --text: #edf2ff; --muted: #b8c2da; --line: rgba(255,255,255,0.10); --line-strong: rgba(255,255,255,0.18);
+      --accent: #8db8ff; --accent-2: #bca3ff; --glow: rgba(125, 163, 255, 0.28); --shadow: 0 24px 80px rgba(0,0,0,0.35);
+      --radius-xl: 28px; --radius-lg: 22px; --container: 1120px; --content: 760px; --header-h: 72px;
+      --font-sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --font-serif: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino, "Times New Roman", serif;
+    }
+
+    html[data-theme="light"] {
+      --bg: #f4f7fb; --bg-2: #edf2f8; --surface: rgba(255,255,255,0.75); --surface-strong: rgba(255,255,255,0.95);
+      --text: #182131; --muted: #51607a; --line: rgba(24,33,49,0.10); --line-strong: rgba(24,33,49,0.18);
+      --accent: #295fd2; --accent-2: #7750d8; --glow: rgba(72, 117, 219, 0.18); --shadow: 0 24px 80px rgba(31,43,67,0.14);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: var(--font-sans);
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(124,88,255,0.22), transparent 28%),
+        radial-gradient(circle at top right, rgba(73,140,255,0.18), transparent 26%),
+        linear-gradient(180deg, var(--bg), var(--bg-2) 42%, var(--bg));
+      min-height: 100vh;
+    }
+
+    a { color: var(--accent); }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(16px);
+      background: rgba(10,14,22,0.6);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .topbar-inner {
+      max-width: var(--container);
+      margin: 0 auto;
+      min-height: var(--header-h);
+      padding: 12px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand strong {
+      font-size: 0.93rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      display: block;
+    }
+
+    .brand span {
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    .btn {
+      border: 1px solid var(--line-strong);
+      background: var(--surface);
+      color: var(--text);
+      border-radius: 999px;
+      padding: 12px 16px;
+      cursor: pointer;
+    }
+
+    .main {
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 32px 20px 80px;
+    }
+
+    .story-card {
+      max-width: var(--content);
+      margin: 0 auto;
+      padding: 40px;
+      border-radius: var(--radius-xl);
+      border: 1px solid var(--line);
+      background: var(--surface);
+      box-shadow: var(--shadow);
+    }
+
+    .story-title {
+      font-family: var(--font-serif);
+      font-size: 2.6rem;
+      margin: 0 0 10px;
+    }
+
+    .story-card p {
+      font-family: var(--font-serif);
+      font-size: 1.2rem;
+      line-height: 1.85;
+      margin: 0 0 1em;
+    }
+
+    .cta-wrap {
+      max-width: var(--content);
+      margin: 30px auto 0;
+      text-align: center;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      color: white;
+      border: none;
+      padding: 14px 18px;
+      border-radius: 14px;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    @media (max-width: 640px) {
+      .topbar-inner { padding-inline: 14px; }
+      .main { padding: 24px 14px 64px; }
+      .story-card { padding: 26px 20px; }
+      .story-title { font-size: 2.1rem; }
+      .story-card p { font-size: 1.12rem; }
+    }
+  </style>
+</head>
+
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <strong>Приключения Истины</strong>
+      <span>Нижний Новгород · глава 26</span>
+    </div>
+    <button class="btn" onclick="toggleTheme()">Тема</button>
+  </div>
+</header>
+
+<main class="main">
+  <article class="story-card">
+    <h1 class="story-title">Дождь по крыше палатки</h1>
+
+<p>Ночью я просыпаюсь от странного звука.</p>
+
+<p>Тук.</p>
+
+<p>Тук...</p>
+
+<p>Тук...</p>
+
+<p>Я открываю глаза.</p>
+
+<p>Темно.</p>
+
+<p>Папа тоже не спит.</p>
+
+<p>— Слышишь?</p>
+
+<p>Я киваю.</p>
+
+<p>Капли падают на палатку всё чаще.</p>
+
+<p>Через минуту начинается настоящий дождь.</p>
+
+<p>По тенту стучит вода.</p>
+
+<p>По листьям бегут ручейки.</p>
+
+<p>Где-то совсем рядом шумят сосны.</p>
+
+<p>А внутри тепло.</p>
+
+<p>Наш большой матрас тихонько покачивается, когда кто-нибудь поворачивается.</p>
+
+<p>Я натягиваю спальник почти до самого носа.</p>
+
+<p>— Хорошо...</p>
+
+<p>— Хорошо, — соглашается папа.</p>
+
+<p>Мы молчим.</p>
+
+<p>Дождь разговаривает за нас.</p>
+
+<p>Он становится сильнее.</p>
+
+<p>Потом ещё сильнее.</p>
+
+<p>Кажется, будто кто-то наверху вылил огромное ведро воды.</p>
+
+<p>Я прислушиваюсь.</p>
+
+<p>У каждого дерева свой голос.</p>
+
+<p>У каждой капли свой звук.</p>
+
+<p>Тент шуршит.</p>
+
+<p>Палатка тихонько потрескивает.</p>
+
+<p>Иногда где-то далеко смеются люди.</p>
+
+<p>Наверное, тоже не спят.</p>
+
+<p>— Пап...</p>
+
+<p>— Что?</p>
+
+<p>— А палатка точно не промокнет?</p>
+
+<p>Он улыбается.</p>
+
+<p>Проводит рукой по ткани.</p>
+
+<p>Потом кладёт ладонь на матрас.</p>
+
+<p>— Попробуй.</p>
+
+<p>Я тоже трогаю.</p>
+
+<p>Сухо.</p>
+
+<p>Совсем сухо.</p>
+
+<p>Снаружи льёт как из ведра.</p>
+
+<p>А внутри будто появился маленький домик.</p>
+
+<p>Только наш.</p>
+
+<p>— Мне нравится дождь.</p>
+
+<p>— Почему?</p>
+
+<p>Я долго думаю.</p>
+
+<p>Потом нахожу ответ.</p>
+
+<p>— Потому что сейчас не нужно никуда идти.</p>
+
+<p>Можно просто лежать и слушать.</p>
+
+<p>Папа тихонько смеётся.</p>
+
+<p>— Иногда это тоже приключение.</p>
+
+<p>Наверное, он прав.</p>
+
+<p>Я закрываю глаза.</p>
+
+<p>Последнее, что слышу перед сном, — как дождь играет на крыше нашей палатки свою длинную ночную песню.</p>
+
+  </article>
+
+  <section class="cta-wrap">
+    <a class="btn-primary" href="../index.html">СОДЕРЖАНИЕ</a>
+  </section>
+</main>
+
+<script>
+function toggleTheme(){
+  const r = document.documentElement;
+  r.setAttribute('data-theme', r.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+}
+</script>
+
+<!-- Yandex.Metrika -->
+<script type="text/javascript">
+  (function(m,e,t,r,i,k,a){
+    m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+    m[i].l=1*new Date();
+    k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+  })(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+  ym(109239506, "init", {
+    clickmap:true,
+    trackLinks:true,
+    accurateTrackBounce:true
+  });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/109239506" style="position:absolute; left:-9999px;" alt=""></div></noscript>
+
+</body>
+</html>

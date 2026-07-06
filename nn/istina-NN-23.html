@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Приключения Истины в Нижнем Новгороде</title>
+  <meta name="description" content="Он хочет сено">
+  <meta name="color-scheme" content="dark light">
+  <meta property="og:title" content="Приключения Истины в Нижнем Новгороде">
+  <meta property="og:description" content="Он хочет сено">
+  <meta property="og:type" content="website">
+
+  <style>
+    :root {
+      --bg: #0a0d14; --bg-2: #0f1522; --surface: rgba(15, 23, 36, 0.72); --surface-strong: rgba(18, 29, 46, 0.92);
+      --text: #edf2ff; --muted: #b8c2da; --line: rgba(255,255,255,0.10); --line-strong: rgba(255,255,255,0.18);
+      --accent: #8db8ff; --accent-2: #bca3ff; --glow: rgba(125, 163, 255, 0.28); --shadow: 0 24px 80px rgba(0,0,0,0.35);
+      --radius-xl: 28px; --radius-lg: 22px; --container: 1120px; --content: 760px; --header-h: 72px;
+      --font-sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --font-serif: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino, "Times New Roman", serif;
+    }
+
+    html[data-theme="light"] {
+      --bg: #f4f7fb; --bg-2: #edf2f8; --surface: rgba(255,255,255,0.75); --surface-strong: rgba(255,255,255,0.95);
+      --text: #182131; --muted: #51607a; --line: rgba(24,33,49,0.10); --line-strong: rgba(24,33,49,0.18);
+      --accent: #295fd2; --accent-2: #7750d8; --glow: rgba(72, 117, 219, 0.18); --shadow: 0 24px 80px rgba(31,43,67,0.14);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: var(--font-sans);
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(124,88,255,0.22), transparent 28%),
+        radial-gradient(circle at top right, rgba(73,140,255,0.18), transparent 26%),
+        linear-gradient(180deg, var(--bg), var(--bg-2) 42%, var(--bg));
+      min-height: 100vh;
+    }
+
+    a { color: var(--accent); }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(16px);
+      background: rgba(10,14,22,0.6);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .topbar-inner {
+      max-width: var(--container);
+      margin: 0 auto;
+      min-height: var(--header-h);
+      padding: 12px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand strong {
+      font-size: 0.93rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      display: block;
+    }
+
+    .brand span {
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    .btn {
+      border: 1px solid var(--line-strong);
+      background: var(--surface);
+      color: var(--text);
+      border-radius: 999px;
+      padding: 12px 16px;
+      cursor: pointer;
+    }
+
+    .main {
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 32px 20px 80px;
+    }
+
+    .story-card {
+      max-width: var(--content);
+      margin: 0 auto;
+      padding: 40px;
+      border-radius: var(--radius-xl);
+      border: 1px solid var(--line);
+      background: var(--surface);
+      box-shadow: var(--shadow);
+    }
+
+    .story-title {
+      font-family: var(--font-serif);
+      font-size: 2.6rem;
+      margin: 0 0 10px;
+    }
+
+    .story-card p {
+      font-family: var(--font-serif);
+      font-size: 1.2rem;
+      line-height: 1.85;
+      margin: 0 0 1em;
+    }
+
+    .cta-wrap {
+      max-width: var(--content);
+      margin: 30px auto 0;
+      text-align: center;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      color: white;
+      border: none;
+      padding: 14px 18px;
+      border-radius: 14px;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    @media (max-width: 640px) {
+      .topbar-inner { padding-inline: 14px; }
+      .main { padding: 24px 14px 64px; }
+      .story-card { padding: 26px 20px; }
+      .story-title { font-size: 2.1rem; }
+      .story-card p { font-size: 1.12rem; }
+    }
+  </style>
+</head>
+
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <strong>Приключения Истины</strong>
+      <span>Нижний Новгород · глава 23</span>
+    </div>
+    <button class="btn" onclick="toggleTheme()">Тема</button>
+  </div>
+</header>
+
+<main class="main">
+  <article class="story-card">
+    <h1 class="story-title">Он хочет сено</h1>
+
+<p>На следующий день папа снова загадочно улыбается.</p>
+
+<p>— Сегодня я познакомлю тебя с очень добрыми ребятами.</p>
+
+<p>— Они тоже приехали на фестиваль?</p>
+
+<p>— Нет.</p>
+
+<p>— Тогда где они живут?</p>
+
+<p>— Сейчас увидишь.</p>
+
+<p>Мы едем совсем недолго.</p>
+
+<p>Лес остаётся позади.</p>
+
+<p>Появляется деревянный забор.</p>
+
+<p>За ним пасутся лошади.</p>
+
+<p>Я даже забываю закрыть дверь машины.</p>
+
+<p>— Пап...</p>
+
+<p>— Что?</p>
+
+<p>— Их так много...</p>
+
+<p>Некоторые лениво машут хвостами.</p>
+
+<p>Другие смотрят на нас большими спокойными глазами.</p>
+
+<p>А один маленький жеребёнок осторожно прячется за маму.</p>
+
+<p>Из конюшни выходит женщина.</p>
+
+<p>— Хотите познакомиться?</p>
+
+<p>Я быстро киваю.</p>
+
+<p>Она протягивает мне большую охапку свежего сена.</p>
+
+<p>Сено пахнет летом.</p>
+
+<p>Солнцем.</p>
+
+<p>И чем-то очень добрым.</p>
+
+<p>— Не бойся, — говорит она. — Просто держи ладошку ровно.</p>
+
+<p>Первая лошадь подходит медленно.</p>
+
+<p>Так медленно, будто специально не хочет меня испугать.</p>
+
+<p>Она осторожно касается моей ладони мягкими губами.</p>
+
+<p>Потом забирает сено.</p>
+
+<p>Хрум.</p>
+
+<p>Я замираю.</p>
+
+<p>— Пап...</p>
+
+<p>Он улыбается.</p>
+
+<p>— Ну как?</p>
+
+<p>Я только смеюсь.</p>
+
+<p>Потому что словами это объяснить невозможно.</p>
+
+<p>Ко мне подходит ещё одна лошадь.</p>
+
+<p>Потом третья.</p>
+
+<p>Потом тот самый жеребёнок всё-таки решается подойти поближе.</p>
+
+<p>Он смешно вытягивает шею.</p>
+
+<p>Но до сена не достаёт.</p>
+
+<p>— Ему тоже хочется, — говорю я.</p>
+
+<p>Я отламываю совсем маленький пучок.</p>
+
+<p>Жеребёнок осторожно забирает его.</p>
+
+<p>И тут почему-то сама собой появляется песенка.</p>
+
+<p>Сначала совсем тихо.</p>
+
+<p>— Он хочет сено...</p>
+
+<p>Папа смотрит на меня.</p>
+
+<p>Я продолжаю.</p>
+
+<p>— Я хочу сено...</p>
+
+<p>Потом начинаю смеяться.</p>
+
+<p>— Ты хочешь сено...</p>
+
+<p>Лошадь спокойно жуёт.</p>
+
+<p>— Они хотят сено...</p>
+
+<p>Теперь уже смеётся папа.</p>
+
+<p>— Очень познавательная песня.</p>
+
+<p>— Это урок русского языка.</p>
+
+<p>— Тогда повторим ещё раз?</p>
+
+<p>И мы вместе начинаем петь.</p>
+
+<p>Лошади совершенно не возражают.</p>
+
+<p>Мне даже кажется, что одной из них песенка нравится.</p>
+
+<p>Она смешно шевелит ушами и подходит за новой порцией.</p>
+
+<p>Время проходит совсем незаметно.</p>
+
+<p>Когда всё сено заканчивается, я глажу одну лошадь по шее.</p>
+
+<p>Она тёплая.</p>
+
+<p>Тихая.</p>
+
+<p>И почему-то совсем не хочет никуда уходить.</p>
+
+<p>Мне тоже не хочется.</p>
+
+<p>Мы уже садимся в машину, когда я вдруг говорю:</p>
+
+<p>— Пап...</p>
+
+<p>— Что?</p>
+
+<p>— Спасибо.</p>
+
+<p>Он смотрит на меня удивлённо.</p>
+
+<p>— За что?</p>
+
+<p>Я ещё раз оглядываюсь на лошадей.</p>
+
+<p>Жеребёнок уже бегает по загону.</p>
+
+<p>Большая рыжая лошадь спокойно жуёт траву.</p>
+
+<p>Ветер качает высокую траву вокруг.</p>
+
+<p>— За этот день.</p>
+
+<p>Папа молчит несколько секунд.</p>
+
+<p>Потом заводит машину.</p>
+
+<p>— Знаешь...</p>
+
+<p>— Что?</p>
+
+<p>— Мне кажется, они тоже были рады с тобой познакомиться.</p>
+
+<p>Я машу рукой в открытое окно.</p>
+
+<p>И вдруг одна лошадь поднимает голову.</p>
+
+<p>Конечно, она просто услышала машину.</p>
+
+<p>Но мне всё равно кажется, что она прощается именно со мной.</p>
+
+  </article>
+
+  <section class="cta-wrap">
+    <a class="btn-primary" href="../index.html">СОДЕРЖАНИЕ</a>
+  </section>
+</main>
+
+<script>
+function toggleTheme(){
+  const r = document.documentElement;
+  r.setAttribute('data-theme', r.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+}
+</script>
+
+<!-- Yandex.Metrika -->
+<script type="text/javascript">
+  (function(m,e,t,r,i,k,a){
+    m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+    m[i].l=1*new Date();
+    k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+  })(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+  ym(109239506, "init", {
+    clickmap:true,
+    trackLinks:true,
+    accurateTrackBounce:true
+  });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/109239506" style="position:absolute; left:-9999px;" alt=""></div></noscript>
+
+</body>
+</html>

@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Приключения Истины в Нижнем Новгороде</title>
+  <meta name="description" content="Песчаная гора">
+  <meta name="color-scheme" content="dark light">
+  <meta property="og:title" content="Приключения Истины в Нижнем Новгороде">
+  <meta property="og:description" content="Песчаная гора">
+  <meta property="og:type" content="website">
+
+  <style>
+    :root {
+      --bg: #0a0d14; --bg-2: #0f1522; --surface: rgba(15, 23, 36, 0.72); --surface-strong: rgba(18, 29, 46, 0.92);
+      --text: #edf2ff; --muted: #b8c2da; --line: rgba(255,255,255,0.10); --line-strong: rgba(255,255,255,0.18);
+      --accent: #8db8ff; --accent-2: #bca3ff; --glow: rgba(125, 163, 255, 0.28); --shadow: 0 24px 80px rgba(0,0,0,0.35);
+      --radius-xl: 28px; --radius-lg: 22px; --container: 1120px; --content: 760px; --header-h: 72px;
+      --font-sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --font-serif: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino, "Times New Roman", serif;
+    }
+
+    html[data-theme="light"] {
+      --bg: #f4f7fb; --bg-2: #edf2f8; --surface: rgba(255,255,255,0.75); --surface-strong: rgba(255,255,255,0.95);
+      --text: #182131; --muted: #51607a; --line: rgba(24,33,49,0.10); --line-strong: rgba(24,33,49,0.18);
+      --accent: #295fd2; --accent-2: #7750d8; --glow: rgba(72, 117, 219, 0.18); --shadow: 0 24px 80px rgba(31,43,67,0.14);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: var(--font-sans);
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(124,88,255,0.22), transparent 28%),
+        radial-gradient(circle at top right, rgba(73,140,255,0.18), transparent 26%),
+        linear-gradient(180deg, var(--bg), var(--bg-2) 42%, var(--bg));
+      min-height: 100vh;
+    }
+
+    a { color: var(--accent); }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(16px);
+      background: rgba(10,14,22,0.6);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .topbar-inner {
+      max-width: var(--container);
+      margin: 0 auto;
+      min-height: var(--header-h);
+      padding: 12px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand strong {
+      font-size: 0.93rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      display: block;
+    }
+
+    .brand span {
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    .btn {
+      border: 1px solid var(--line-strong);
+      background: var(--surface);
+      color: var(--text);
+      border-radius: 999px;
+      padding: 12px 16px;
+      cursor: pointer;
+    }
+
+    .main {
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 32px 20px 80px;
+    }
+
+    .story-card {
+      max-width: var(--content);
+      margin: 0 auto;
+      padding: 40px;
+      border-radius: var(--radius-xl);
+      border: 1px solid var(--line);
+      background: var(--surface);
+      box-shadow: var(--shadow);
+    }
+
+    .story-title {
+      font-family: var(--font-serif);
+      font-size: 2.6rem;
+      margin: 0 0 10px;
+    }
+
+    .story-card p {
+      font-family: var(--font-serif);
+      font-size: 1.2rem;
+      line-height: 1.85;
+      margin: 0 0 1em;
+    }
+
+    .cta-wrap {
+      max-width: var(--content);
+      margin: 30px auto 0;
+      text-align: center;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      color: white;
+      border: none;
+      padding: 14px 18px;
+      border-radius: 14px;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    @media (max-width: 640px) {
+      .topbar-inner { padding-inline: 14px; }
+      .main { padding: 24px 14px 64px; }
+      .story-card { padding: 26px 20px; }
+      .story-title { font-size: 2.1rem; }
+      .story-card p { font-size: 1.12rem; }
+    }
+  </style>
+</head>
+
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <strong>Приключения Истины</strong>
+      <span>Нижний Новгород · глава 24</span>
+    </div>
+    <button class="btn" onclick="toggleTheme()">Тема</button>
+  </div>
+</header>
+
+<main class="main">
+  <article class="story-card">
+    <h1 class="story-title">Песчаная гора</h1>
+
+<p>После встречи с лошадьми мне кажется, что удивляться уже нечему.</p>
+
+<p>Но фестиваль, кажется, со мной не согласен.</p>
+
+<p>— Купаться? — спрашивает папа утром.</p>
+
+<p>— Купаться!</p>
+
+<p>Через несколько минут мы уже идём к воде.</p>
+
+<p>Я снимаю кроссовки.</p>
+
+<p>Носки.</p>
+
+<p>Шарфик тоже остаётся рядом.</p>
+
+<p>Складываю всё аккуратной кучкой.</p>
+
+<p>— Запомни место, — говорит папа.</p>
+
+<p>— Конечно.</p>
+
+<p>Через минуту я уже стою по колено в воде.</p>
+
+<p>Она тёплая.</p>
+
+<p>Совсем не хочется выходить.</p>
+
+<p>Мы с папой медленно идём всё дальше.</p>
+
+<p>Вода становится то прохладнее, то снова тёплой.</p>
+
+<p>Под ногами мягкий песок.</p>
+
+<p>Иногда пробегают маленькие рыбки.</p>
+
+<p>Папа показывает рукой вдаль.</p>
+
+<p>— Видишь тот песчаный берег?</p>
+
+<p>— Да.</p>
+
+<p>— Там очень интересно.</p>
+
+<p>Мы доходим почти до самого островка.</p>
+
+<p>Потом папа говорит:</p>
+
+<p>— Я пойду обратно в лагерь.</p>
+
+<p>— А я ещё похожу.</p>
+
+<p>— Договорились. Только далеко не убегай.</p>
+
+<p>— Хорошо!</p>
+
+<p>Я машу рукой и иду вдоль берега.</p>
+
+<p>Вода тихонько плещется у ног.</p>
+
+<p>Вдруг впереди кто-то быстро карабкается вверх по огромному песчаному склону.</p>
+
+<p>Мальчишка.</p>
+
+<p>Примерно моего возраста.</p>
+
+<p>Он почти добирается до вершины.</p>
+
+<p>Но песок осыпается.</p>
+
+<p>И он снова съезжает вниз.</p>
+
+<p>Я смеюсь.</p>
+
+<p>Он замечает меня.</p>
+
+<p>— Поможешь?</p>
+
+<p>— Конечно!</p>
+
+<p>Я подбегаю.</p>
+
+<p>Делаю первый шаг.</p>
+
+<p>Песок сразу уезжает назад.</p>
+
+<p>Второй.</p>
+
+<p>Третий.</p>
+
+<p>Мы оба начинаем смеяться.</p>
+
+<p>— Тут не так!</p>
+
+<p>— А как?</p>
+
+<p>— Зигзагами!</p>
+
+<p>Мы пробуем снова.</p>
+
+<p>Получается.</p>
+
+<p>Поднимаемся всё выше.</p>
+
+<p>Иногда скатываемся обратно.</p>
+
+<p>Иногда специально прыгаем вниз.</p>
+
+<p>Песок разлетается во все стороны.</p>
+
+<p>Кажется, будто мы бегаем по огромному золотому облаку.</p>
+
+<p>— Меня зовут... — начинает он.</p>
+
+<p>Но в этот момент сильный ветер уносит конец его фразы.</p>
+
+<p>— Что?</p>
+
+<p>— Потом!</p>
+
+<p>Мы снова смеёмся.</p>
+
+<p>Наверху открывается весь берег.</p>
+
+<p>Горьковское море блестит так ярко, что приходится щуриться.</p>
+
+<p>Наш лагерь где-то далеко превращается в маленькие цветные точки.</p>
+
+<p>Мы садимся прямо на тёплый песок.</p>
+
+<p>— Красиво, — говорит мальчик.</p>
+
+<p>— Очень.</p>
+
+<p>Через некоторое время он машет рукой.</p>
+
+<p>— Мне пора!</p>
+
+<p>И убегает вниз по склону так быстро, будто умеет летать.</p>
+
+<p>Я остаюсь ещё ненадолго.</p>
+
+<p>Потом тоже возвращаюсь к воде.</p>
+
+<p>На берегу всё лежит на своих местах.</p>
+
+<p>Кроссовки.</p>
+
+<p>Носки.</p>
+
+<p>Шарфик.</p>
+
+<p>Только папы нет.</p>
+
+<p>Я надеваю обувь и иду обратно.</p>
+
+<p>Когда поднимаюсь к лагерю, папа сразу облегчённо улыбается.</p>
+
+<p>— Ну наконец-то.</p>
+
+<p>— Что?</p>
+
+<p>— Я уже начал немного волноваться.</p>
+
+<p>— Почему?</p>
+
+<p>— Прихожу на берег.</p>
+
+<p>Лежат кроссовки.</p>
+
+<p>Лежит шарфик.</p>
+
+<p>А Истины нет.</p>
+
+<p>Я начинаю смеяться.</p>
+
+<p>— Так я же гуляла!</p>
+
+<p>— Теперь знаю.</p>
+
+<p>Он делает серьёзное лицо.</p>
+
+<p>— Но в следующий раз хотя бы оставь записку.</p>
+
+<p>— На песке?</p>
+
+<p>— Можно большую.</p>
+
+<p>— Тогда волна её сразу сотрёт.</p>
+
+<p>Мы оба смеёмся.</p>
+
+<p>А вечером я вдруг понимаю, что весь день почти не вспоминала телефон.</p>
+
+<p>Потому что сегодня было намного интереснее смотреть не в экран.</p>
+
+<p>А вокруг.</p>
+
+  </article>
+
+  <section class="cta-wrap">
+    <a class="btn-primary" href="../index.html">СОДЕРЖАНИЕ</a>
+  </section>
+</main>
+
+<script>
+function toggleTheme(){
+  const r = document.documentElement;
+  r.setAttribute('data-theme', r.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+}
+</script>
+
+<!-- Yandex.Metrika -->
+<script type="text/javascript">
+  (function(m,e,t,r,i,k,a){
+    m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+    m[i].l=1*new Date();
+    k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+  })(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+  ym(109239506, "init", {
+    clickmap:true,
+    trackLinks:true,
+    accurateTrackBounce:true
+  });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/109239506" style="position:absolute; left:-9999px;" alt=""></div></noscript>
+
+</body>
+</html>
