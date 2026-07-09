@@ -183,6 +183,21 @@
       padding: clamp(24px, 4vw, 40px);
       backdrop-filter: blur(10px);
     }
+
+    .cover-card {
+      max-width: var(--content);
+      margin: 0 auto 18px;
+      border: 1px solid var(--line);
+      background: var(--surface);
+      box-shadow: var(--shadow);
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+    }
+    .cover-card img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
     .index-title {
       margin: 0 0 14px;
       font-family: var(--font-serif);
@@ -200,7 +215,7 @@
     }
     .chapter-list {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-template-columns: repeat(2, minnax(0, 1fr));
       gap: 12px;
     }
     .chapter-link {
@@ -254,8 +269,13 @@
   </section>
 
   <main class="main">
+
+    <section class="cover-card" aria-label="Изображение">
+      <img src="1/понедельник.jpg" alt="Понедельник">
+    </section>
+
     <section class="index-card" id="chapters" aria-label="Список глав">
-      <h2 class="index-title">Главы 1–88</h2>
+      <h2 class="index-title">Главы 1–9</h2>
       <p class="index-subtitle">Список страниц</p>
 
       <div class="chapter-list">
@@ -268,7 +288,7 @@
         <a class="chapter-link" href="nn/killer-cat-diary-7.html"><span>Глава 7</span></a>
         <a class="chapter-link" href="nn/killer-cat-diary-8.html"><span>Глава 8</span></a>
         <a class="chapter-link" href="nn/killer-cat-diary-9.html"><span>Глава 9</span></a>
-
+ 
       </div>
     </section>
   </main>
