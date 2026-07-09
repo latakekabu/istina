@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Дневник кота-убийцы — Содержание</title>
+  <meta name="description" content="Содержание книги «Дневник кота-убийцы»">
+  <meta name="color-scheme" content="dark light">
+  <meta property="og:title" content="Дневник кота-убийцы — Содержание">
+  <meta property="og:description" content="Ссылки на главы 1–88">
+  <meta property="og:type" content="website">
+  <style>
+    :root {
+      --bg: #0a0d14;
+      --bg-2: #0f1522;
+      --surface: rgba(15, 23, 36, 0.72);
+      --surface-strong: rgba(18, 29, 46, 0.92);
+      --text: #edf2ff;
+      --muted: #b8c2da;
+      --line: rgba(255,255,255,0.10);
+      --line-strong: rgba(255,255,255,0.18);
+      --accent: #8db8ff;
+      --accent-2: #bca3ff;
+      --glow: rgba(125, 163, 255, 0.28);
+      --shadow: 0 24px 80px rgba(0,0,0,0.35);
+      --radius-xl: 28px;
+      --radius-lg: 22px;
+      --container: 1120px;
+      --content: 860px;
+      --header-h: 72px;
+      --font-sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --font-serif: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino, "Times New Roman", serif;
+    }
+    html[data-theme="light"] {
+      --bg: #f4f7fb;
+      --bg-2: #edf2f8;
+      --surface: rgba(255,255,255,0.75);
+      --surface-strong: rgba(255,255,255,0.95);
+      --text: #182131;
+      --muted: #51607a;
+      --line: rgba(24,33,49,0.10);
+      --line-strong: rgba(24,33,49,0.18);
+      --accent: #295fd2;
+      --accent-2: #7750d8;
+      --glow: rgba(72, 117, 219, 0.18);
+      --shadow: 0 24px 80px rgba(31,43,67,0.14);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation: none !important; transition: none !important; }
+    }
+    body {
+      margin: 0;
+      font-family: var(--font-sans);
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(124,88,255,0.22), transparent 28%),
+        radial-gradient(circle at top right, rgba(73,140,255,0.18), transparent 26%),
+        linear-gradient(180deg, var(--bg), var(--bg-2) 42%, var(--bg));
+      min-height: 100vh;
+    }
+    a { color: var(--accent); text-underline-offset: 0.2em; }
+    a:hover { color: var(--accent-2); }
+    a:focus-visible, button:focus-visible, summary:focus-visible {
+      outline: 3px solid var(--accent);
+      outline-offset: 3px;
+      border-radius: 12px;
+    }
+    .skip-link {
+      position: absolute;
+      left: 12px;
+      top: -48px;
+      background: var(--surface-strong);
+      color: var(--text);
+      padding: 10px 14px;
+      border-radius: 12px;
+      z-index: 1000;
+    }
+    .skip-link:focus { top: 12px; }
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(16px);
+      background: color-mix(in srgb, var(--bg) 70%, transparent);
+      border-bottom: 1px solid var(--line);
+    }
+    .topbar-inner {
+      max-width: var(--container);
+      margin: 0 auto;
+      min-height: var(--header-h);
+      padding: 12px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .brand {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.05;
+    }
+    .brand strong {
+      font-size: 0.93rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .brand span {
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+    .actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .btn {
+      appearance: none;
+      border: 1px solid var(--line-strong);
+      background: var(--surface);
+      color: var(--text);
+      border-radius: 999px;
+      padding: 12px 16px;
+      font: inherit;
+      cursor: pointer;
+      text-decoration: none;
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform .2s ease, border-color .2s ease, background .2s ease;
+    }
+    .btn:hover { transform: translateY(-1px); border-color: var(--accent); }
+    .hero {
+      max-width: var(--content);
+      margin: 0 auto;
+      padding: 56px 20px 28px;
+    }
+    .hero-card, .index-card {
+      border: 1px solid var(--line);
+      background: var(--surface);
+      box-shadow: var(--shadow);
+      border-radius: var(--radius-xl);
+    }
+    .hero-card {
+      padding: clamp(28px, 5vw, 52px);
+      position: relative;
+      overflow: hidden;
+    }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: .82rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+    .eyebrow::before {
+      content: "";
+      width: 28px;
+      height: 1px;
+      background: currentColor;
+      opacity: .7;
+    }
+    .hero-card h1 {
+      margin: 0;
+      font-size: clamp(2.4rem, 5vw, 4.8rem);
+      line-height: .95;
+      letter-spacing: -0.04em;
+    }
+    .main {
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 18px 20px 80px;
+    }
+    .index-card {
+      max-width: var(--content);
+      margin: 0 auto;
+      padding: clamp(24px, 4vw, 40px);
+      backdrop-filter: blur(10px);
+    }
+    .index-title {
+      margin: 0 0 14px;
+      font-family: var(--font-serif);
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      line-height: 1.08;
+      letter-spacing: -0.03em;
+    }
+    .index-subtitle {
+      margin: 0 0 28px;
+      font-size: 1rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--muted);
+      font-weight: 600;
+    }
+    .chapter-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+    .chapter-link {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 56px;
+      padding: 14px 16px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      text-decoration: none;
+      color: var(--text);
+      background: color-mix(in srgb, var(--surface) 86%, transparent);
+      transition: transform .2s ease, border-color .2s ease, background .2s ease;
+    }
+    .chapter-link:hover {
+      transform: translateY(-2px);
+      border-color: var(--accent);
+      background: color-mix(in srgb, var(--surface-strong) 78%, transparent);
+    }
+
+    @media (max-width: 920px) {
+      .groups { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 640px) {
+      .topbar-inner { padding-inline: 14px; }
+      .hero, .main { padding-inline: 14px; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#chapters">Перейти к содержанию</a>
+
+  <header class="topbar" id="top">
+    <div class="topbar-inner">
+      <div class="brand" aria-label="Название страницы">
+        <strong>Дневник кота-убийцы</strong>
+        <span>содержание</span>
+      </div>
+      <div class="actions">
+        <button class="btn" id="themeToggle" type="button" aria-label="Переключить тему">Тема</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero" aria-label="Обложка содержания">
+    <div class="hero-card">
+      <div class="eyebrow">Навигация по книге</div>
+      <h1>Содержание</h1>
+    </div>
+  </section>
+
+  <main class="main">
+    <section class="index-card" id="chapters" aria-label="Список глав">
+      <h2 class="index-title">Главы 1–88</h2>
+      <p class="index-subtitle">Список страниц</p>
+
+      <div class="chapter-list">
+        <a class="chapter-link" href="nn/draft-killer-cat-diary-monday.html"><span>Глава 1 — Понедельник</span></a>
+        <a class="chapter-link" href="nn/killer-cat-diary-2.html"><span>Глава 2</span></a>
+        <a class="chapter-link" href="nn/killer-cat-diary-3.html"><span>Глава 3</span></a>
+        <a class="chapter-link" href="nn/killer-cat-diary-4.html"><span>Глава 4</span></a>
+        <a class="chapter-link" href="nn/killer-cat-diary-5.html"><span>Глава 5</span></a>
+        <a class="chapter-link" href="nn/killer-cat-diary-6.html"><span>Глава 6</span></a>
+        <a class="chapter-link" href="nn/killer-cat-diary-7.html"><span>Глава 7</span></a>
+        <a class="chapter-link" href="nn/killer-cat-diary-8.html"><span>Глава 8</span></a>
+        <a class="chapter-link" href="nn/killer-cat-diary-9.html"><span>Глава 9</span></a>
+
+      </div>
+    </section>
+  </main>
+
+  <script id="asset-manifest" type="application/json">{
+  "version": "3.0",
+  "mode": "single_html",
+  "visual_profile": "cinematic_service_premium",
+  "page": "index.html",
+  "slots": [
+    {
+      "slot": "hero_visual",
+      "role": "hero",
+      "status": "placeholder",
+      "type": "css_visual",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "slot": "og_image",
+      "role": "meta",
+      "status": "placeholder",
+      "type": "generated_placeholder",
+      "aspect_ratio": "1200:630"
+    }
+  ]
+}</script>
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "headline": "Дневник кота-убийцы — Содержание",
+  "name": "Дневник кота-убийцы — Содержание",
+  "description": "Ссылки на главы 1–22",
+  "inLanguage": "ru"
+}</script>
+  <script>
+    (function() {
+      const root = document.documentElement;
+      const storageKey = 'lc_theme';
+      const saved = localStorage.getItem(storageKey);
+      if (saved === 'light' || saved === 'dark') {
+        root.setAttribute('data-theme', saved);
+      } else {
+        const prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+        root.setAttribute('data-theme', prefersLight ? 'light' : 'dark');
+      }
+      const btn = document.getElementById('themeToggle');
+      if (btn) {
+        btn.addEventListener('click', function() {
+          const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+          root.setAttribute('data-theme', next);
+          localStorage.setItem(storageKey, next);
+        });
+      }
+    })();
+  </script>
+
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript">
+    (function(m,e,t,r,i,k,a) {
+      m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+      m[i].l=1*new Date();
+      for (var j = 0; j < document.scripts.length; j++) {
+        if (document.scripts[j].src === r) return;
+      }
+      k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a);
+    })(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+    ym(109239506, "init", {
+      clickmap:true,
+      trackLinks:true,
+      accurateTrackBounce:true,
+      webvisor:true
+    });
+  </script>
+  <noscript><div><img src="https://mc.yandex.ru/watch/109239506" style="position:absolute; left:-9999px;" alt=""></div></noscript>
+</body>
+</html>
